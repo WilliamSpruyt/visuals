@@ -76,8 +76,8 @@ class App extends Component {
           );
         })}</div><TunnelCanvas width={400} height={250} r={128} g={255} b={0} className="canvi" /></div>
       <div className="App-header">
-        <TunnelCanvas   width={200} height={250} r={128} g={0} b={0} className="canvi" />
-        <FlyingTriangleCanvas width={400} height={250}  r={10} g={10} b={255} className="canvi" />
+        <TunnelCanvas   width={200} height={250} r={Math.random()*255} g={Math.random()*255} b={Math.random()*255} className="canvi" />
+        <FlyingTriangleCanvas width={400} height={250}  r={Math.random()*255} g={Math.random()*255} b={Math.random()*255} className="canvi" />
         <TunnelCanvas width={200} height={250} r={null} g={null} b={255} className="canvi" />
         <div className="App-header">{(this.state.faceList)?this.state.faceList.slice(1,3).map(ele => {
           return (

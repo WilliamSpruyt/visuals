@@ -11,8 +11,8 @@ export default class Face extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         width={this.props.width}
         height={this.props.height}
-        enableBackground="new 0 0 128 168"
-        viewBox="0 0 128 168"
+         
+        viewBox="0 0 132 165"
       ><rect
       fill={this.props.cols.B}
       id={this.props.label}

@@ -37,7 +37,7 @@ export default function vocate(mouthWidth,
             mouthCurl / 2,
             mouthMood / 2
           );
-          console.log("after"+tempFaceList)
+          
           return tempFaceList 
         }
       }

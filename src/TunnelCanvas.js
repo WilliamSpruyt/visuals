@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import pool  from './images/poolscene.JPG'
+ 
 import Missile  from  './Missile'
 
 class TunnelCanvas extends React.Component {
@@ -14,7 +14,8 @@ class TunnelCanvas extends React.Component {
           canvas.width/2,canvas.height/2,20+(Math.random()* 50),  20+(Math.random()* 50), Math.random()*360, 2, 2,Math.random()<0.5? false:true,(Math.random()* this.props.r),(Math.random()* this.props.g),(Math.random()* this.props.b)
         ))
       }
-        
+        ctx.fillStyle="rgb("+this.props.r+","+this.props.g+","+this.props.b+")";
+ctx.fillRect(0,0,this.props.width,this.props.height);
       setInterval(() => {
          missileArr.forEach((ele)=>{ele.update(ctx)})
       }, 0);

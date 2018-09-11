@@ -10,6 +10,9 @@
 }
 
 .App-header {
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
   display:flex; 
   flex-direction:row;
 }
@@ -39,6 +42,14 @@ svg {
   align-content: center;
 }
 div {
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  float: left;
+  align-content: center;
+}
+canvas {
   border-width: 0px;
   margin: 0px;
   padding: 0px;

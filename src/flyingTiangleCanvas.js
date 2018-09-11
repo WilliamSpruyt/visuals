@@ -6,7 +6,7 @@ class FlyingTriangleCanavas extends React.Component {
     componentDidMount() {
       const canvas = this.refs.canvas
       const ctx = canvas.getContext("2d")
-        
+       
 canvas.inCircleFinder=this.inCircleFinder;
 canvas.triangle=this.triangle;
 canvas.circle=this.circle;
@@ -14,11 +14,13 @@ canvas.dist=this.dist;
 canvas.red=this.props.r;
 canvas.green=this.props.g;
 canvas.blue=this.props.b;
-var xCentre = 600;
-var yCentre = 375;
+ 
+ 
 var xMiddle=this.props.width/2;
 var yMiddle=this.props.height/2;
 var mousePos=[xMiddle,yMiddle] 
+ctx.fillStyle="rgb("+this.props.r+","+this.props.g+","+this.props.b+")";
+ctx.fillRect(0,0,this.props.width,this.props.height);
 canvas.addEventListener('mousemove', function(evt) {
   var rect = canvas.getBoundingClientRect()
    mousePos=[
@@ -32,7 +34,7 @@ canvas.addEventListener('mousemove', function(evt) {
     render() {
       return(
         <div>
-          <canvas ref="canvas" width={this.props.width} height={this.props.height} />
+          <canvas ref="canvas" width={this.props.width} height={this.props.height} style={this.props.cStyle}  />
           
         </div>
       )

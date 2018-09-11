@@ -1,7 +1,7 @@
 .App {
   
-   background-color: darkseagreen
-  
+   background-color: darkseagreen;
+    
 }
 
 .App-logo {
@@ -29,4 +29,20 @@
 
 .canvi{
    
+}
+svg {
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  float: left;
+  align-content: center;
+}
+div {
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  float: left;
+  align-content: center;
 }

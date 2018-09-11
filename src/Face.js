@@ -18,6 +18,7 @@ export default class Face extends React.Component {
       id={this.props.label}
       x="0"
       y="0"
+      z="0"
       width={this.props.width}
       height={this.props.height}
        

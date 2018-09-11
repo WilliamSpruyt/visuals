@@ -12,6 +12,7 @@ export default function vocate(mouthWidth,
     numFrames,
     faceNum,
     tempFaceList) {
+     // console.log("before"+tempFaceList)
         let widthInc = endMouthWidth / numFrames;
         let moodInc = endMouthMood / numFrames;
         let curlInc = endMouthCurl / numFrames;
@@ -36,7 +37,7 @@ export default function vocate(mouthWidth,
             mouthCurl / 2,
             mouthMood / 2
           );
-    
+          console.log("after"+tempFaceList)
           return tempFaceList 
         }
       }

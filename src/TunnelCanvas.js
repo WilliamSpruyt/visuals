@@ -22,7 +22,7 @@ class TunnelCanvas extends React.Component {
     render() {
       return(
         <div>
-          <canvas ref="canvas" width={this.props.width} height={this.props.height} backgroundColor='purple'/>
+          <canvas ref="canvas" width={this.props.width} height={this.props.height} />
           
         </div>
       )

@@ -15,6 +15,7 @@ export default function faceListGenerate(num) {
         width: ["5%", "10%", "15%"][Math.floor(Math.random() * 3)],
         height: ["25%", "10%", "15%", "20%"][0],
         label: i,
+        key: i,
         bosseye: Math.random() > 0.2 ? 1 : -1,
         glanceX: Math.random() * 10 - 5,
         glanceY: Math.random() * 6 - 3,

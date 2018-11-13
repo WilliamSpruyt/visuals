@@ -34,7 +34,7 @@ canvas.addEventListener('mousemove', function(evt) {
     render() {
       return(
         <div>
-          <canvas ref="canvas" width={this.props.width} height={this.props.height} style={this.props.cStyle}  />
+          <canvas ref="canvas" onClick={(e)=>{this.props.handleClick(e)}} width={this.props.width} height={this.props.height} style={this.props.cStyle}  />
           
         </div>
       )

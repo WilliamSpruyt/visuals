@@ -16,9 +16,11 @@ class App extends Component {
     this.state = {
       faceList: this.flg(faceNum),
       loneface:this.flg(1),
-      comps:this.cmp()
+      comps:this.cmp(),
+       
     };
-   this.handleClick = this.handleClick.bind(this);}
+   this.handleClick = this.handleClick.bind(this);
+   this.handleTriClick = this.handleTriClick.bind(this);}
     
     componentDidMount() {
       var phon = setInterval(() => {
@@ -46,14 +48,14 @@ class App extends Component {
     }
   render() {
     return (
-      <div className="App"><div className="App-header"><FlyingTriangleCanvas width={200} height={250}  r={255} g={10} b={10} className="canvi" />
+      <div className="App"><div className="App-header"><FlyingTriangleCanvas handleClick={this.handleTriClick}  width={200} height={250}  r={255} g={10} b={10} className="canvi" />
       <TunnelCanvas width={200} height={250} r={0} g={255} b={128} className="canvi" /><TunnelCanvas width={400} height={250} r={255} g={0} b={0} className="canvi" /><div className="App-header">{this.state.faceList.slice(0,1).map(ele => {
           return (
             <div >
               <Face
                 className="face"
-                width={200}
-                height={250}
+                width={ele.compWidth}
+                height={ele.compHeight}
                 key={ele.label}
                 label={ele.label}
                 cols={ele.cols}
@@ -77,15 +79,15 @@ class App extends Component {
         })}</div><TunnelCanvas width={400} height={250} r={128} g={255} b={0} className="canvi" /></div>
       <div className="App-header">
         <TunnelCanvas   width={200} height={250} r={Math.random()*255} g={Math.random()*255} b={Math.random()*255} className="canvi" />
-        <FlyingTriangleCanvas width={400} height={250}  r={Math.random()*255} g={Math.random()*255} b={Math.random()*255} className="canvi" />
+        <FlyingTriangleCanvas  handleClick={this.handleTriClick} width={400} height={250}  r={Math.random()*255} g={Math.random()*255} b={Math.random()*255} className="canvi" />
         <TunnelCanvas width={200} height={250} r={null} g={null} b={255} className="canvi" />
         <div className="App-header">{(this.state.faceList)?this.state.faceList.slice(1,3).map(ele => {
           return (
             <div >
               <Face
                 className="face"
-                width={200}
-                height={250}
+                width={ele.compWidth}
+                height={ele.compHeight}
                 key={ele.label}
                 label={ele.label}
                 cols={ele.cols}
@@ -107,14 +109,14 @@ class App extends Component {
             </div>
           );
         }):null}</div>
-        <FlyingTriangleCanvas width={200} height={250}  r={255} g={255} b={100} className="canvi" />
+        <FlyingTriangleCanvas  handleClick={this.handleTriClick} width={200} height={250}  r={255} g={255} b={100} className="canvi" />
       </div><div className="App-header">{(this.state.faceList)?this.state.faceList.slice(3,8).map(ele => {
           return (
             <div >
               <Face
                 className="face"
-                width={200}
-                height={250}
+                width={ele.compWidth}
+                height={ele.compHeight}
                 key={ele.label}
                 label={ele.label}
                 cols={ele.cols}
@@ -135,13 +137,13 @@ class App extends Component {
               />
             </div>
           );
-        }):null}</div><FlyingTriangleCanvas width={400} height={250}  r={128} g={10} b={255} className="canvi" /><div className="App-header">{(this.state.faceList)?this.state.faceList.slice(8).map(ele => {
+        }):null}</div><FlyingTriangleCanvas  handleClick={this.handleTriClick}  width={400} height={250}  r={128} g={10} b={255} className="canvi" /><div className="App-header">{(this.state.faceList)?this.state.faceList.slice(8).map(ele => {
           return (
             <div >
               <Face
                 className="face"
-                width={200}
-                height={250}
+                width={ele.compWidth}
+                height={ele.compHeight}
                 key={ele.label}
                 label={ele.label}
                 cols={ele.cols}
@@ -172,8 +174,13 @@ class App extends Component {
   handleClick(event) {
     let tempFaceList = this.state.faceList.slice();
     tempFaceList[event.target.id].awake = !tempFaceList[event.target.id].awake;
+    
     this.setState({ theList: tempFaceList });
   }
+  handleTriClick(event) {
+   console.log(event);
+  }
 }
+
 
 export default App;

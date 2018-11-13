@@ -12,6 +12,8 @@ export default function faceListGenerate(num) {
       let faceheightVar = Math.random() * -20;
       let compsCols = comps(0);
       theList.push({
+        compWidth:200,
+        compHeight:250,
         width: ["5%", "10%", "15%"][Math.floor(Math.random() * 3)],
         height: ["25%", "10%", "15%", "20%"][0],
         label: i,
